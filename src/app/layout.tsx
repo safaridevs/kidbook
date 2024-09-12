@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
 import Head from "next/head";
-import localFont from "next/font/local";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS\
 import Navbar from "../components/Navbar";
-import BootstrapClient from "../components/bootstrapClient";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,10 +14,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const title = "Book Sharing";
   return (
     <html lang="en">
       <body>
-        <Head>title ="Book Sharing"</Head>
+        <Head>{title}</Head>
         <Navbar />
         {children}
       </body>

@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const isLoggedIn = true;
