@@ -3,12 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
-  const isLoggedIn = true;
   return (
     <>
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="d-flex justify-content-between">
+      <div className="container ">
+        <nav className="navbar  navbar-expand-lg navbar-light bg-light">
+          <div className="d-flex justify-content-between ">
             <Link href="/" className="d-flex">
               <Image
                 src="./assets/images/logo.svg"
@@ -18,15 +17,6 @@ const Navbar = () => {
               />
               <p>Kidbook Share</p>
             </Link>
-            {isLoggedIn ? (
-              <div className="d-flex ">
-                <Link href="/create-book" className="btn btn-success">
-                  Share Book
-                </Link>
-              </div>
-            ) : (
-              <></>
-            )}
           </div>
         </nav>
       </div>
